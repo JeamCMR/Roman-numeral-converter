@@ -13,7 +13,7 @@ body{
     background-image: linear-gradient(to top, #62565d, #696170, #686f83, #627e92, #5c8e99, #5c9299, #5d9699, #5f9a98, #5c949a, #5c8e9a, #5d8898, #608295);
     background-repeat: no-repeat;
     background-size: cover;
-
+    overflow: hidden;
 }
 
 .main-title{
@@ -28,13 +28,77 @@ body{
 
 .Layoad-converter{
     background-color: #3e695e96;
-    border: 2px solid white;
-    width: 450px;
-    height: 200px;
+    border: 3px solid white;
+    width: 500px;
+    height: 300px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     padding: 30px;
     justify-content: space-around;
+    align-items: center;
+}
+
+.text-converter{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.number-converter{
+    width: 400px;
+    height: 50px;
+    font-size: 2rem;
+    color: white;
+    background-image: linear-gradient(to left bottom, #608295, #5d8898, #5c8e9a, #5c949a, #5f9a98, #5d9699, #5c9299, #5c8e99, #627e92, #686f83, #696170, #62565d);
+}
+
+
+
+.btn {
+  background: #346bd9;
+  background-image: -webkit-linear-gradient(top, #346bd9, #2edb6b);
+  background-image: -moz-linear-gradient(top, #346bd9, #2edb6b);
+  background-image: -ms-linear-gradient(top, #346bd9, #2edb6b);
+  background-image: -o-linear-gradient(top, #346bd9, #2edb6b);
+  background-image: linear-gradient(to bottom, #346bd9, #2edb6b);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #000000;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #1f628d 2px;
+  text-decoration: none;
+  width: 400px;
+}
+
+.btn:hover {
+  background: #3cfc89;
+  background-image: -webkit-linear-gradient(top, #3cfc89, #34d98f);
+  background-image: -moz-linear-gradient(top, #3cfc89, #34d98f);
+  background-image: -ms-linear-gradient(top, #3cfc89, #34d98f);
+  background-image: -o-linear-gradient(top, #3cfc89, #34d98f);
+  background-image: linear-gradient(to bottom, #3cfc89, #34d98f);
+  text-decoration: none;
+}
+
+
+.result{
+    width: 450px;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    text-align: center;
+    background-color: #3e695e96;
+    border: 3px solid white;
+    color: white;
+}
+
+.hidden{
+    display: none;
 }
 
