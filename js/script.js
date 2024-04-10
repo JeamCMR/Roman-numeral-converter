@@ -4,47 +4,21 @@ const inputNumber = document.getElementById("number");
 const buttonCovert = document.getElementById("convert-btn");
 const result = document.getElementById("output");
 
-const romanNumber = [
-  {
-    "I":1
-  },
-  {
-    "IV":4
-  },
-  {
-    "V":5
-  },
-  {
-    "IX":9
-  },
-  {
-    "X":10
-  },
-  {
-    "XL":40
-  },
-  {
-    "L":50
-  },
-  {
-    "XC":90
-  },
-  {
-    "C":100
-  },
-  {
-    "CD":400
-  },
-  {
-    "D":500
-  },
-  {
-    "CM":900
-  },
-  {
-    "M":1000
-  }
-]
+const romanToNum = {
+  M: 1000,
+  CM: 900,
+  D: 500,
+  CD: 400,
+  C: 100,
+  XC: 90,
+  L: 50,
+  XL: 40,
+  X: 10,
+  IX: 9,
+  V: 5,
+  IV: 4,
+  I: 1
+};
 
 
 
@@ -53,10 +27,19 @@ const romanNumber = [
 
 //Convertir numero romano a decimal
 function romanNumberConvert (input) {
-  
-  
-
+  var roman = '';
+  for (let key in romanToNum) {
+    debugger
+      while (input >= romanToNum[key]) {
+        roman += key;
+        input -= romanToNum[key];
+      }
+  }
+  return roman;
 }
+
+
+
 
 //Cambiar estilos de css
 const changeSylesCss = () =>{
@@ -86,10 +69,10 @@ const checkUserInput = () => {
     changeSylesCss();
     return
   }
+  
+  }
 
-  // result.textContent = decimalToBinary(inputInt);
-  // numberInput.value = "";
-};
+
 
 buttonCovert.addEventListener("click", () => {
   checkUserInput();
