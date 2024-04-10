@@ -10,9 +10,7 @@ body{
     font-family: "Young Serif", serif;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to top, #62565d, #696170, #686f83, #627e92, #5c8e99, #5c9299, #5d9699, #5f9a98, #5c949a, #5c8e9a, #5d8898, #608295);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #5E8697;
     overflow: hidden;
 }
 
@@ -20,10 +18,14 @@ body{
     font-size: 1.5rem;
     text-align: center;
     margin: 20px ;
+    color: bisque;
+    text-shadow: -1px 0px 13px rgba(0,0,0,0.55);
 }
+
+
+
 .main-title span{
     font-size: 3rem;
-   
 }
 
 .Layoad-converter{
@@ -43,6 +45,8 @@ body{
     font-size: 1.5rem;
     text-align: center;
     font-weight: 600;
+    color: bisque;
+    text-shadow: -1px 0px 13px rgba(0,0,0,0.55);
 }
 
 .number-converter{
@@ -50,7 +54,7 @@ body{
     height: 50px;
     font-size: 2rem;
     color: white;
-    background-image: linear-gradient(to left bottom, #608295, #5d8898, #5c8e9a, #5c949a, #5f9a98, #5d9699, #5c9299, #5c8e99, #627e92, #686f83, #696170, #62565d);
+    background-color: #344c55;
 }
 
 
@@ -70,7 +74,9 @@ body{
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   border: solid #1f628d 2px;
-  text-decoration: none;
+  color: bisque;
+  text-shadow: -1px 0px 13px rgba(0,0,0,0.55);
+  font-weight: 800;
   width: 400px;
 }
 
@@ -82,6 +88,7 @@ body{
   background-image: -o-linear-gradient(top, #3cfc89, #34d98f);
   background-image: linear-gradient(to bottom, #3cfc89, #34d98f);
   text-decoration: none;
+  cursor: pointer;
 }
 
 
@@ -102,3 +109,7 @@ body{
     display: none;
 }
 
+.result-error{
+    font-size: 1.5rem;
+    color: #850000;
+}
