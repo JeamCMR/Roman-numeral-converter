@@ -26,10 +26,10 @@ const romanToNum = {
 
 
 //Convertir numero romano a decimal
-function romanNumberConvert (input) {
-  var roman = '';
+const romanNumberConvert = (input) => {
+  let roman = '';
   for (let key in romanToNum) {
-    debugger
+    // debugger
       while (input >= romanToNum[key]) {
         roman += key;
         input -= romanToNum[key];
@@ -42,36 +42,50 @@ function romanNumberConvert (input) {
 
 
 //Cambiar estilos de css
-const changeSylesCss = () =>{
+const changeSylesError = () =>{
   result.style.border = "3px solid RGB(133,0,0)";
   result.style.backgroundColor = "#FFADAD";
   result.classList.remove("hidden");
 }
 
+//Cambiar estilos de css
+const changeSylesDone = () =>{
+  result.style.border = "3px solid white";
+  result.style.backgroundColor = "#3e695e96";
+  result.style.fontSize="2rem";
+  result.classList.remove("hidden");
+}
+
+
+
 //Validar entrada
 const checkUserInput = () => {
   const numInput = parseInt(inputNumber.value);
-  console.log(!inputNumber.value, isNaN(inputNumber.value));
-  if (!inputNumber.value || isNaN(inputNumber.value)) {
+
+  
+  if ((!inputNumber.value) || isNaN(numInput) ) {
     result.innerHTML = `<p class="result-error">Introduzca un número válido</p>`;
-    changeSylesCss();
+    changeSylesError();
     return;
   }
   
   if (numInput <= 0){
     result.innerHTML = `<p class="result-error">Por favor, introduzca un número mayor o igual a 1</p>`;
-    changeSylesCss();
+    changeSylesError();
     return;
   }
 
-  if(numInput >= 3999){
+  if(numInput > 3999){
     result.innerHTML = `<p class="result-error">Por favor, introduzca un número menor o igual a 3999.</p>`;
-    changeSylesCss();
+    changeSylesError();
     return
   }
   
-  }
+  let numberRomano= romanNumberConvert(numInput)
+  result.innerHTML = `<p>${numberRomano}</p>`
+  changeSylesDone();
 
+  }
 
 
 buttonCovert.addEventListener("click", () => {
