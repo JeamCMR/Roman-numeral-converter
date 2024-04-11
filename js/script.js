@@ -48,6 +48,7 @@ const changeSylesError = () =>{
   result.classList.remove("hidden");
 }
 
+
 //Cambiar estilos de css
 const changeSylesDone = () =>{
   result.style.border = "3px solid white";
@@ -84,7 +85,6 @@ const checkUserInput = () => {
   let numberRomano= romanNumberConvert(numInput)
   result.innerHTML = `<p>${numberRomano}</p>`
   changeSylesDone();
-
   }
 
 
